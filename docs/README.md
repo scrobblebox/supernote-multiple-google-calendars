@@ -1,31 +1,23 @@
-<img src="logo.svg" width="100%" height="300" alt="Sync Multiple Google Calendars into One" />
+<img src="logo.svg" width="100%" height="300" alt="Supernote Sync Multiple Google Calendars into One" />
 
-# Sync Multiple Google Calendars into One
+# Supernote Sync Multiple Google Calendars into One
 
-When you want to sync multiple Google Calendars into one. Currently Google Calendar doesn't have this option and [IFTTT]/[Zapier] don't allow an easy way to do this.
-
-This is useful for a collective Busy/Free Calendar or Google Home integration.
+When you connect your Google Calendar to your Supernote, only the default calendar appears. This script allows you to copy events from other calendars into your primary calendar.  
 
 ## Getting Starting
 
-1. Make sure every calendar you want sync is shared with the account that holds the shared calendar.
-
-2. Log into the account that holds the shared calendar and go to the [Google Apps Scripts] website.
-
-3. Click on "New Project".
-
-4. Replace everything in `Code.gs` with the contents of [SyncCalendarsIntoOne.gs].
-
-5. Create a new script file called `BatchRequests.gs` with the contents of [BatchRequests.gs]
-
-6. Update `calendarsToMerge`, `calendarToMergeInto`, `SYNC_DAYS_IN_PAST`, and `SYNC_DAYS_IN_FUTURE` variables. Be sure to save.
-
-7. Click the `Project Settings` Gear icon on the left panel. Check the `Show "appsscript.json" manifest file in editor`. Go back to code editor on the left, and update its content with [appsscript.json].
-
-8. Click `Run`. This will load the `Authorization required` window since it's your first time running the script. Click on `Review permissions` and give it permission to your account.
-
-9. Click on `Triggers` clock icon on the left panel to add a trigger. Click on `Add Trigger`.
-
+1. Create or login to your "primary account" - the account you'll login to with your Supernote.
+2. Share all calendars you want to merge with this account
+3. Log into the Google Apps Scripts website": https://script.google.com/home
+4. Click on "New Project".
+5. Replace everything in `Code.gs` with the contents of [SyncCalendarsIntoOne.gs].
+6. Create a new script file called `BatchRequests.gs` with the contents of [BatchRequests.gs]
+7. Update `calendarsToMerge`, `calendarToMergeInto`, `SYNC_DAYS_IN_PAST`, and `SYNC_DAYS_IN_FUTURE` variables. Be sure to save.
+8. Click the `Project Settings` Gear icon on the left panel. Check the `Show "appsscript.json" manifest file in editor`.
+9. Go back to code editor on the left, and update its content with [appsscript.json].
+10. Click `Run`. This will load the `Authorization required` window since it's your first time running the script.
+11. Click on `Review permissions` and give it permission to your account.
+12. Click on `Triggers` clock icon on the left panel to add a trigger. Click on `Add Trigger`.
    - You have two choices, "Time-driven" or "From calendar".
    - Time-driven will run every X minutes/hours/etc. Use this if you have calendars that update frequently (more than 5-10 times in a 15 minute timespan)
    - "From calendar" will run when a given calendar updates. Use this if you want instant merging.
@@ -47,7 +39,7 @@ This is useful for a collective Busy/Free Calendar or Google Home integration.
      - Click "Save"
      - Repeat these steps for every calendar you're merging _from_.
 
-10. Enjoy!
+11. Enjoy!
 
 ## Notes
 
@@ -65,7 +57,6 @@ MIT © [Ali Karbassi]
 
 [ali karbassi]: http://karbassi.com
 [trigger-icon]: trigger.png
-[google apps scripts]: https://script.google.com/intro
 [synccalendarsintoone.gs]: ../SyncCalendarsIntoOne.gs
 [batchrequests.gs]: ../BatchRequests.gs
 [appsscript.json]: ../appsscript.json
