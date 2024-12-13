@@ -4,6 +4,8 @@
 
 When you connect your Google Calendar to your Supernote, only the default calendar appears. This script allows you to copy events from other calendars into your primary calendar.  
 
+This is a modification in name only of https://github.com/karbassi/sync-multiple-google-calendars 
+
 ## Getting Starting
 
 1. Create or login to your "primary account" - the account you'll login to with your Supernote.
