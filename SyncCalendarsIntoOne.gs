@@ -1,12 +1,14 @@
 // Calendars to merge from.
-// "[X]" is what is placed in front of your calendar event in the shared calendar.
-// Use "" if you want none.
+// Find Calendar ID in Calendar Settings > Integrate calendar > Calendar ID
+// Use "[X]" notation to prefix your calendar event.
+// Use "" if you want no prefix.
+
 const CALENDARS_TO_MERGE = {
   "[Personal]": "calendar-id@gmail.com",
   "[Work]": "calendar-id@gmail.com",
 }
 
-// The ID of the shared calendar
+// The ID of your Supernote calendar
 const CALENDAR_TO_MERGE_INTO = "shared-calendar-id@gmail.com"
 
 // Number of days in the past and future to sync.
